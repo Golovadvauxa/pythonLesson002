@@ -10,4 +10,6 @@
 result = (1 + 2) * 3
 print(result)
 
+my_result = 1 * 2 + 3 + 4 * 5
+print(my_result)
 # TODO написать формулу для 1 2 3 4 5 и вывести значение на консоль
