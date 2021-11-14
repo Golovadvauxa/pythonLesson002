@@ -10,18 +10,19 @@ meadow = ('клевер', 'одуванчик', 'ромашка', 'клевер'
 # создайте множество цветов, произрастающих в саду и на лугу
 # garden_set =
 # meadow_set =
-# TODO здесь ваш код
 
+garden_set = set(garden)
+meadow_set = set(meadow)
 # выведите на консоль все виды цветов
-# TODO здесь ваш код
 
+print('All of the flowers are', (garden_set | meadow_set))
 # выведите на консоль те, которые растут и там и там
-# TODO здесь ваш код
 
+print('Flowers that grows everywhere are', (garden_set & meadow_set))
 # выведите на консоль те, которые растут в саду, но не растут на лугу
-# TODO здесь ваш код
 
+print('Flowers that grows only in garden are', (garden_set - meadow_set))
 # выведите на консоль те, которые растут на лугу, но не растут в саду
-# TODO здесь ваш код
 
+print('Flowers that grows only on meadow are', (meadow_set - garden_set))
 
