@@ -50,26 +50,32 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
 # TODO здесь ваш код
-chair_code = goods['Стул']
-chair_item = store[chair_code][0]
-chair_quantity = chair_item['quantity']
-chair_price = chair_item['price']
-chair_cost = chair_quantity * chair_price
-print('Стул -', chair_quantity, 'шт, стоимость', chair_cost, 'руб')
+table_cost = (store[goods['Стол']][0]['quantity'] * store[goods['Стол']][0]['price']) + \
+             (store[goods['Стол']][1]['quantity'] * store[goods['Стол']][1]['price'])
 
-sofa_code = goods['Диван']
-sofa_item = store[sofa_code][0]
-sofa_quantity = sofa_item['quantity']
-sofa_price = sofa_item['price']
-sofa_cost = sofa_quantity * sofa_price
+table_quantity = (store[goods['Стол']][0]['quantity']) + \
+                 (store[goods['Стол']][1]['quantity'])
+print('Стол -', table_quantity, 'шт, стоимость', table_cost, 'руб')
+
+
+sofa_cost = (store[goods['Диван']][0]['quantity'] * store[goods['Диван']][0]['price']) + \
+            (store[goods['Диван']][1]['quantity'] * store[goods['Диван']][1]['price'])
+
+sofa_quantity = (store[goods['Диван']][0]['quantity']) + \
+                (store[goods['Диван']][1]['quantity'])
 print('Диван -', sofa_quantity, 'шт, стоимость', sofa_cost, 'руб')
 
-table_code = goods['Стол']
-table_item = store[table_code][0]
-table_quantity = table_item['quantity']
-table_price = table_item['price']
-table_cost = table_quantity * table_price
-print('Стол -', table_quantity, 'шт, стоимость', table_cost, 'руб')
+
+chair_cost = (store[goods['Стул']][0]['quantity'] * store[goods['Стул']][0]['price']) + \
+             (store[goods['Стул']][1]['quantity'] * store[goods['Стул']][1]['price']) + \
+             (store[goods['Стул']][2]['quantity'] * store[goods['Стул']][2]['price'])
+
+chair_quantity = (store[goods['Стул']][0]['quantity']) + \
+                 (store[goods['Стул']][1]['quantity']) + \
+                 (store[goods['Стул']][2]['quantity'])
+print('Стул -', chair_quantity, 'шт, стоимость', chair_cost, 'руб')
+
+
 ##########################################################################################
 # ВНИМАНИЕ! После того как __ВСЯ__ домашняя работа сделана и запушена на сервер,         #
 # нужно зайти в ЛМС (LMS - Learning Management System ) по адресу http://go.skillbox.ru  #
